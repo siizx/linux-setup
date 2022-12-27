@@ -1,0 +1,5 @@
+Dec 04 16:09:51 pop-os io.elementary.appcenter.desktop[30607]: Failed to register: Timeout was reached
+Dec 04 16:09:17 pop-os io.elementary.appcenter.desktop[30593]: Failed to register: Timeout was reached
+Dec 04 15:47:11 pop-os gnome-shell[1930]: Received error from D-Bus search provider io.elementary.appcenter.desktop: Gio.IOErrorEnum: Timeout was reached
+Dec 04 15:32:18 pop-os io.elementary.appcenter.desktop[5270]: Failed to register: Timeout was reached
+Dec 04 15:17:52 pop-os gnome-shell[1930]: Received error from D-Bus search provider io.elementary.appcenter.desktop: Gio.IOErrorEnum: Timeout was reached
