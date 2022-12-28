@@ -1,1 +1,1 @@
-sudo chmod a=rwx *
+sudo chmod a=rwx .*

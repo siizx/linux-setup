@@ -1,0 +1,3 @@
+#!/bin/bash
+gnome-terminal -- bash -c 'sudo apt update && sudo apt upgrade -y && sudo apt install gcc -y && sudo apt install g++ -y && sudo apt install gdb -y && sudo apt install vim -y && sudo apt install gedit -y && sudo apt install gedit-plugins -y && sudo apt install git -y && sudo apt install gh -y'
+
