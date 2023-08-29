@@ -1,3 +1,3 @@
 #!/bin/bash
-gnome-terminal -- bash -c 'sudo apt update && sudo apt upgrade -y && sudo apt install gcc -y && sudo apt install g++ -y && sudo apt install gdb -y && sudo apt install vim -y && sudo apt install gedit -y && sudo apt install gedit-plugins -y && sudo apt install git -y && sudo apt install gh -y && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -y && timedatectl set-local-rtc 1 --adjust-system-clock'
+gnome-terminal -- bash -c 'sudo apt update && sudo apt upgrade -y && sudo apt install gcc -y && sudo apt install g++ -y && sudo apt install gdb -y && sudo apt install vim -y && sudo apt install gedit -y && sudo apt install gedit-plugins -y && sudo apt install git -y && sudo apt install gh -y && wget https://download.opera.com/download/get/?partner=www&opsys=Linux&utm_campaign=%2300+-+WW+-+Search+-+EN+-+Branded&utm_content=37670026502 -y && sudo apt install kdeconnect -y && timedatectl set-local-rtc 1 --adjust-system-clock'
 
