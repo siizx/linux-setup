@@ -34,6 +34,7 @@ EOF
 echo "~~~ Created the .vimrc file with a basic config. if you want the most updated config, run the script inside /home/andrea/git/linux-desktop/vim-configs "
 
 # LOW Priority commands
+sudo apt-get install imagemagick
 sudo apt install gh -y
 sudo apt install build-essential
 sudo apt-get install thunar -y
