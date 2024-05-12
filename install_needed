@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# HIGH Priority commands:
+sudo apt update
+sudo apt upgrade -y
+sudo apt install gcc -y
+sudo apt install g++ -y
+sudo apt install gdb -y
+sudo apt install git -y
+sudo apt purge vim -y
+sudo hash -d vim
+sudo apt install vim-gtk -y
+sudo apt install i3 -y
+
+# CREATE/OVERWRITE VIM CONFIG
+cat > ~/.vimrc << EOF
+" The following are commented out as they cause vim to behave a lot
+" differently from regular Vi. They are highly recommended though.
+set showcmd		" Show (partial) command in status line.
+set showmatch		" Show matching brackets.
+"set ignorecase		" Do case insensitive matching
+"set smartcase		" Do smart case matching
+set incsearch		" Incremental search
+"set autowrite		" Automatically save before commands like :next and :make
+"set hidden		" Hide buffers when they are abandoned
+set mouse=a		" Enable mouse usage (all modes)
+set number
+set tabstop=4
+syntax on
+set autoindent
+set relativenumber
+set clipboard=unnamedplus
+EOF
+echo "~~~ Created the .vimrc file with a basic config. if you want the most updated config, run the script inside /home/andrea/git/linux-desktop/vim-configs "
+
+# LOW Priority commands
+sudo apt install gh -y
+sudo apt install build-essential
+sudo apt-get install thunar -y
+sudo apt install lxappearance -y
+sudo apt install gtk-chtheme -y
+sudo apt install gedit -y
+sudo apt install gedit-plugins -y
+sudo apt install kdeconnect -y
+
+read -p "~~~ DONE! Press enter to exit."

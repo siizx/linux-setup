@@ -13,7 +13,7 @@ set tabstop=4
 syntax on
 set autoindent
 set relativenumber
-
+set clipboard=unnamedplus
 
 
 
