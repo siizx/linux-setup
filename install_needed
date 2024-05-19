@@ -7,10 +7,14 @@ sudo apt install gcc -y
 sudo apt install g++ -y
 sudo apt install gdb -y
 sudo apt install git -y
+sudo apt install build-essential -y
 sudo apt purge vim -y
 sudo hash -d vim
 sudo apt install vim-gtk -y
 sudo apt install i3 -y
+sudo apt install snapd -y
+sudo snap install nordpass -y
+sudo apt install gh -y
 
 # CREATE/OVERWRITE VIM CONFIG
 cat > ~/.vimrc << EOF
@@ -34,15 +38,11 @@ EOF
 echo "~~~ Created the .vimrc file with a basic config. if you want the most updated config, run the script inside /home/andrea/git/linux-desktop/vim-configs "
 
 # LOW Priority commands
-sudo apt install papirus-icon-theme
-sudo apt-get install imagemagick
-sudo apt install gh -y
-sudo apt install build-essential
+sudo apt install papirus-icon-theme -y
+sudo apt-get install imagemagick -y
+sudo apt install thunderbird -y
 sudo apt-get install thunar -y
 sudo apt install lxappearance -y
 sudo apt install gtk-chtheme -y
-sudo apt install gedit -y
-sudo apt install gedit-plugins -y
-sudo apt install kdeconnect -y
 
 read -p "~~~ DONE! Press enter to exit."
