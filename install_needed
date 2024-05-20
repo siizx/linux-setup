@@ -22,6 +22,7 @@ pipx install thefuck
 sudo apt install pavucontrol -y
 sudo apt install fzf -y
 sudo apt install tig -y
+sudo apt install linux-headers-$(uname -r) -y
 sudo apt install tmux -y
 
 # CREATE/OVERWRITE VIM CONFIG
