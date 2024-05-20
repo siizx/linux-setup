@@ -123,8 +123,9 @@ alias ll='ls -alh --color=auto'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
+alias gp='git push'
+alias overwrite-bashrc='read -p "Are you sure you want to overwrite ~/git/linux-desktop/.bashrc with ~/.bashrc? (y/n): " confirm && [ "$confirm" = "y" ] && cp ~/.bashrc ~/git/linux-desktop/.bashrc'
 alias general-commit='git add . && git commit -m "general update" && git push origin master'
 
 # il robo per the fuck
 eval "$(thefuck --alias)"
-
