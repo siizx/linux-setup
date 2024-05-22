@@ -115,18 +115,24 @@ fi
 # Created by `pipx` on 2024-05-20 13:02:59
 export PATH="$PATH:/home/andrea/.local/bin"
 
-# MY STUFF - My aliases and stuff:
+############ My aliases and stuff #############
 
+# General Section
 alias ll='ls -alh --color=auto'
+
+alias fzfvim='vim $(fzf)'
+alias overwrite-bashrc='read -p "Are you sure you want to overwrite ~/git/linux-desktop/.bashrc with ~/.bashrc? (y/n): " confirm && [ "$confirm" = "y" ] && cp ~/.bashrc ~/git/linux-desktop/.bashrc'
+alias general-commit-push='git add . && git commit -m "general update" && git push origin master'
+
+alias brightness-py-cli='python3 ~/Documents/linux-screen-brightness-dimmer/dimmer.py'
+alias brightness-py-gui='python3 ~/Documents/linux-screen-brightness-dimmer/gui-dimmer.py'
 
 # Aliases for git commands
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
-alias gp='git push'
-alias fzfvim='vim $(fzf)'
-alias overwrite-bashrc='read -p "Are you sure you want to overwrite ~/git/linux-desktop/.bashrc with ~/.bashrc? (y/n): " confirm && [ "$confirm" = "y" ] && cp ~/.bashrc ~/git/linux-desktop/.bashrc'
-alias general-commit-push='git add . && git commit -m "general update" && git push origin master'
+alias gpush='git push'
+alias gpull='git pull'
 
 # il robo per the fuck
 eval "$(thefuck --alias)"
