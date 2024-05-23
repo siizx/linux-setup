@@ -47,6 +47,8 @@ EOF
 echo "~~~ Created the .vimrc file with a basic config. if you want the most updated config, run the script inside /home/andrea/git/linux-desktop/vim-configs "
 
 # LOW Priority commands
+mkdir ~/.vim
+git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
 sudo apt install papirus-icon-theme -y
 sudo apt-get install imagemagick -y
 sudo apt install thunderbird -y
