@@ -1,5 +1,12 @@
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
+
+set runtimepath+=~/.vim/pack/vendor/start/vim-colorschemes
+colorscheme DarkDefault
+if &term =~ '256color'
+  set t_Co=256
+endif
+
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
 "set ignorecase		" Do case insensitive matching
@@ -10,11 +17,7 @@ set incsearch		" Incremental search
 set mouse=a		" Enable mouse usage (all modes)
 set number
 set tabstop=4
-syntax on
 set autoindent
 set relativenumber
+syntax on
 set clipboard=unnamedplus
-
-
-
-
