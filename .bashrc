@@ -116,9 +116,13 @@ fi
 export PATH="$PATH:/home/andrea/.local/bin"
 
 ############ My aliases and stuff #############
-
+# Volume Controls
+alias increase-volume='pactl set-sink-volume 0 +10%'
+alias decrease-volume='pactl set-sink-volume 0 -10%'
 # General Section
 alias ll='ls -alh --color=auto'
+
+alias aggiorna='sudo apt update && sudo apt upgrade -y'
 
 alias fzfvim='vim $(fzf)'
 alias overwrite-bashrc='read -p "Are you sure you want to overwrite ~/git/linux-desktop/.bashrc with ~/.bashrc? (y/n): " confirm && [ "$confirm" = "y" ] && cp ~/.bashrc ~/git/linux-desktop/.bashrc'
@@ -136,3 +140,4 @@ alias gpull='git pull'
 
 # il robo per the fuck
 eval "$(thefuck --alias)"
+export TERM=alacritty
