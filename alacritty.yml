@@ -29,4 +29,5 @@ colors:
 # Font configuration
 font:
   # Point size
-  size: 8.0
+  #  size: 8.0 # Desktop
+  size: 14.0 # VM
