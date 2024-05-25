@@ -21,3 +21,15 @@ set autoindent
 set relativenumber
 syntax on
 set clipboard=unnamedplus
+
+" My function for fzf:
+function! Files_OpenWith_Fzf()
+    let tmpfile = tempname()
+    execute 'silent !fzf >' . tmpfile
+    execute 'e ' . tmpfile
+    let filenames = readfile(tmpfile)
+    call delete(tmpfile)
+    for filename in filenames
+        execute 'e ' . filename
+    endfor
+endfunction
