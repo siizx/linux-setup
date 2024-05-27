@@ -112,9 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Created by `pipx` on 2024-05-20 13:02:59
-export PATH="$PATH:/home/andrea/.local/bin"
-
 ############ My aliases and stuff #############
 
 # Volume Controls
