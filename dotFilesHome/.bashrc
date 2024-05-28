@@ -138,7 +138,7 @@ alias gpsh='git push'
 alias gpll='git pull'
 
 # il robo per the fuck
-eval "$(thefuck --alias)"
+#eval "$(thefuck --alias)"
 export TERM=alacritty
 # Remove duplicates from PATH
 export PATH=$(echo "$PATH" | awk -v RS=':' '!a[$1]++' | paste -sd:)
