@@ -88,7 +88,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-#alias ll='ls -l'
+alias ll='ls -alh --color=auto'
 #alias la='ls -A'
 #alias l='ls -CF'
 
@@ -119,7 +119,7 @@ alias increase-volume='pactl set-sink-volume 0 +10%'
 alias decrease-volume='pactl set-sink-volume 0 -10%'
 
 # General Section
-alias ll='ls -alh --color=auto'
+alias poff_poweroff_alias='poweroff'
 alias aggiorna='sudo apt update && sudo apt upgrade -y'
 alias fzfvim='vim $(fzf)'
 alias copy-homeBashrc-INTO-gitBashrc='read -p "Are you sure you want to overwrite ~/git/linux-desktop/.bashrc with ~/.bashrc? (y/n): " confirm && [ "$confirm" = "y" ] && cp ~/.bashrc ~/git/linux-desktop/dotFilesHome/.bashrc'
