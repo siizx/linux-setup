@@ -24,6 +24,7 @@ sudo apt install fzf -y
 sudo apt install tig -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo apt install tmux -y
+sudo apt install util-linux -y
 
 # CREATE/OVERWRITE VIM CONFIG
 cat > ~/.vimrc << EOF
