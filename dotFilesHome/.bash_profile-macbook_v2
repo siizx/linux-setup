@@ -30,21 +30,15 @@ export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d"
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 
-
-
-####################  DA QUI IN POI E' TUTTO COPIATO DAL BASHRC DI LINUX.
-
-
+############ My aliases and stuff #############
 
 
     alias ls='ls --color=auto'
 	alias ll='ls -alh --color=auto'
-############ My aliases and stuff #############
-
-# Volume Controls
 
 # General Section
 alias Poff_poweroff_alias='poweroff'
+alias g++='/opt/homebrew/bin/g++-14'
 
 # Aliases for git commands
 
