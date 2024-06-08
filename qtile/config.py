@@ -29,6 +29,16 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+from libqtile import hook
+import subprocess
+
+@hook.subscribe.startup_once
+def autostart_once():
+    subprocess.run('/home/andrea/.config/qtile/picom_autostart.sh')
+
+
+
+
 mod = "mod4"
 terminal = "/usr/bin/kitty"
 
@@ -145,6 +155,8 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
+		wallpaper="~/Pictures/wallhaven-kw22p1.jpg",
+        wallpaper_mode="fill",
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
@@ -160,7 +172,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Clock(format="%Y/%m/%d %a %H:%M"),
+                widget.Clock(format="%H:%M %a %d-%m-%Y"),
                 widget.QuickExit(),
             ],
             24,

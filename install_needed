@@ -8,19 +8,18 @@ sudo apt install g++ -y
 sudo apt install gdb -y
 sudo apt install git -y
 sudo apt install build-essential -y
-sudo apt purge vim -y
-sudo hash -d vim
-sudo apt install vim-gtk -y
-sudo apt install i3 -y
-sudo apt install snapd -y
-sudo snap install nordpass -y
-sudo apt install gh -y
-sudo apt update
-sudo apt install python3-dev python3-pip python3-setuptools -y
-sudo apt install pipx -y
-pipx install thefuck
+#sudo apt purge vim -y
+#sudo hash -d vim
+#sudo apt install vim-gtk -y
+#sudo apt install i3 -y
+#sudo apt install snapd -y
+#sudo snap install nordpass -y
+#sudo apt install gh -y
+#sudo apt install python3-dev python3-pip python3-setuptools -y
+#sudo apt install pipx -y
+#pipx install thefuck
 sudo apt install pavucontrol -y
-sudo apt install fzf -y
+#sudo apt install fzf -y
 sudo apt install tig -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo apt install tmux -y
@@ -28,25 +27,25 @@ sudo apt install util-linux -y
 sudo apt install libreadline-dev -y
 
 # CREATE/OVERWRITE VIM CONFIG
-cat > ~/.vimrc << EOF
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
-set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
-"set smartcase		" Do smart case matching
-set incsearch		" Incremental search
-"set autowrite		" Automatically save before commands like :next and :make
-"set hidden		" Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes)
-set number
-set tabstop=4
-syntax on
-set autoindent
-set relativenumber
-set clipboard=unnamedplus
-EOF
-echo "~~~ Created the .vimrc file with a basic config. if you want the most updated config, run the script inside /home/andrea/git/linux-desktop/vim-configs "
+#cat > ~/.vimrc << EOF
+#" The following are commented out as they cause vim to behave a lot
+#" differently from regular Vi. They are highly recommended though.
+#set showcmd		" Show (partial) command in status line.
+#set showmatch		" Show matching brackets.
+#"set ignorecase		" Do case insensitive matching
+#"set smartcase		" Do smart case matching
+#set incsearch		" Incremental search
+#"set autowrite		" Automatically save before commands like :next and :make
+#"set hidden		" Hide buffers when they are abandoned
+#set mouse=a		" Enable mouse usage (all modes)
+#set number
+#set tabstop=4
+#syntax on
+#set autoindent
+#set relativenumber
+#set clipboard=unnamedplus
+#EOF
+#echo "~~~ Created the .vimrc file with a basic config. if you want the most updated config, run the script inside /home/andrea/git/linux-desktop/vim-configs "
 
 # LOW Priority commands
 mkdir ~/.vim
