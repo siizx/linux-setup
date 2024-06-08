@@ -28,6 +28,7 @@ from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from libqtile.widget import backlight # for monitor brightness non funziona... potrei anche levarlo...
 
 from libqtile import hook
 import subprocess
@@ -89,6 +90,23 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+	
+	####### MY KEYBINDS #####
+	# Brightness controls:
+	Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +10%"), desc="Increase brightness"),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s 10%-"), desc="Decrease brightness"),
+	# Audio controls:
+	Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Mute/Unmute audio"),
+	Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase volume"),
+	Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Decrease volume"),
+	# Multimedia controls:
+	Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc="Next track"),
+	Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"), desc="Previous track"),
+	Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"), desc="Play/Pause track"),
+	# Other:
+	Key([], "XF86HomePage", lazy.spawn("xdg-open http://www.google.com"), desc="Open homepage"),
+	Key([], "XF86Mail", lazy.spawn("thunderbird"), desc="Open mail client"),
+    Key([mod], "e", lazy.window.kill(), desc="F4 -> Kill focused window"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -136,15 +154,15 @@ layouts = [
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
-    # layout.MonadTall(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
-    # layout.TreeTab(),
-    # layout.VerticalTile(),
-    # layout.Zoomy(),
+    layout.Bsp(),
+    layout.Matrix(),
+    layout.MonadTall(),
+    layout.MonadWide(),
+    layout.RatioTile(),
+    layout.Tile(),
+    layout.TreeTab(),
+    layout.VerticalTile(),
+    layout.Zoomy(),
 ]
 
 widget_defaults = dict(
