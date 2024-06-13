@@ -1,0 +1,12 @@
+https://droidwin.com/how-to-spoof-your-pc-to-a-samsung-galaxy-book/#Manual_Method
+
+HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\BIOS
+
+valori originali:
+
+SystemProductName: VMware20,1
+
+SystemManufacturer: VMware, Inc.
+
+SystemManufacturer: Samsung 
+SystemProductName: NP960XFG-KC4UK
