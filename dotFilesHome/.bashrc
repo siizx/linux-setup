@@ -37,13 +37,14 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color) 
+        color_prompt=yes
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-force_color_prompt=yes
+force_color_prompt=yes 
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -113,7 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 ############ My aliases and stuff #############
-
+(cat ~/.cache/wal/sequences &)
 # Volume Controls
 alias increase-volume='pactl set-sink-volume 0 +10%'
 alias decrease-volume='pactl set-sink-volume 0 -10%'
@@ -137,8 +138,9 @@ alias gc='git commit -m'
 alias gpsh='git push'
 alias gpll='git pull'
 
-# il robo per the fuck
-#eval "$(thefuck --alias)"
-export TERM=alacritty
+export VISUAL=vim; export EDITOR=vim;
+
+export TERM=kitty
 # Remove duplicates from PATH
 export PATH=$(echo "$PATH" | awk -v RS=':' '!a[$1]++' | paste -sd:)
+
