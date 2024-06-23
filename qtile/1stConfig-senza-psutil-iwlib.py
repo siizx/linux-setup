@@ -1,15 +1,44 @@
-import os
+# Copyright (c) 2010 Aldo Cortesi
+# Copyright (c) 2010, 2014 dequis
+# Copyright (c) 2012 Randall Ma
+# Copyright (c) 2012-2014 Tycho Andersen
+# Copyright (c) 2012 Craig Barnes
+# Copyright (c) 2013 horsik
+# Copyright (c) 2013 Tao Sauvage
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
-from libqtile.widget import backlight
+from libqtile.widget import backlight # for monitor brightness non funziona... potrei anche levarlo...
+
 from libqtile import hook
 import subprocess
 
 @hook.subscribe.startup_once
 def autostart_once():
     subprocess.run('/home/andrea/.config/qtile/picom_autostart.sh')
+
+
+
 
 mod = "mod4"
 terminal = "/usr/bin/kitty"
@@ -160,19 +189,9 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-				widget.SwapGraph(),
-				widget.CPU(),
-                widget.StatusNotifier(),
+                # widget.StatusNotifier(),
                 widget.Systray(),
                 widget.Clock(format="%H:%M %a %d-%m-%Y"),
-				widget.BatteryIcon(),
-				widget.Battery(format="{char} {percent:2.0%}"),
-				widget.Net(interface='wlo1'),
-				widget.Wlan(interface='wlo1'),
-				widget.TextBox(text="Volume:"),
-				widget.Volume(),
-				widget.TextBox(text="Brightness:"),
-				widget.Backlight(backlight_name="intel_backlight"),
                 widget.QuickExit(),
             ],
             24,
