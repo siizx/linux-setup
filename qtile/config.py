@@ -150,7 +150,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(highlight_method='block'),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -160,19 +160,30 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-				widget.SwapGraph(),
+				widget.Net(interface='wlo1'),
+				widget.Sep(), # Separator ---
+				widget.Wlan(interface='wlo1'),
+				widget.Sep(), # Separator ---
+				#widget.CPUGraph(),
 				widget.CPU(),
+				widget.Sep(), # Separator ---
+				widget.TextBox(text=" RAM"),
+				widget.Memory(measure_mem='G'),
+				widget.Sep(), # Separator ---
                 widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Clock(format="%H:%M %a %d-%m-%Y"),
+                widget.Clock(fontsize='18',format="%H:%M %a %d-%m-%Y"),
+				widget.Sep(), # Separator ---
 				widget.BatteryIcon(),
-				widget.Battery(format="{char} {percent:2.0%}"),
-				widget.Net(interface='wlo1'),
-				widget.Wlan(interface='wlo1'),
-				widget.TextBox(text="Volume:"),
+				widget.Battery(fontsize='14', format="{char} {percent:2.0%}"),
+				widget.Sep(), # Separator ---
+				widget.Volume(emoji=True, get_volume_command=None),
 				widget.Volume(),
-				widget.TextBox(text="Brightness:"),
+				widget.Sep(), # Separator ---
+				widget.Image(filename='/home/andrea/.config/qtile/brightness.svg'),
 				widget.Backlight(backlight_name="intel_backlight"),
+				#widget.Bluetooth(),
+				widget.Sep(), # Separator ---
                 widget.QuickExit(),
             ],
             24,
