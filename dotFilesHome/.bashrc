@@ -114,7 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 ############ My aliases and stuff #############
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 # Volume Controls
 alias increase-volume='pactl set-sink-volume 0 +10%'
 alias decrease-volume='pactl set-sink-volume 0 -10%'
@@ -143,4 +143,5 @@ export VISUAL=vim; export EDITOR=vim;
 export TERM=kitty
 # Remove duplicates from PATH
 export PATH=$(echo "$PATH" | awk -v RS=':' '!a[$1]++' | paste -sd:)
+export PATH="$PATH:/sbin"
 

@@ -145,7 +145,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-		wallpaper="~/Pictures/wallhaven-kw22p1.jpg",
+		wallpaper="/usr/share/wallpapers/FuturePrototypeWithLogo/contents/images/1920x1080.svg",
         wallpaper_mode="fill",
         top=bar.Bar(
             [
