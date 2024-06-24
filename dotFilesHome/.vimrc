@@ -83,3 +83,8 @@ command! FilesOpenWithFZF call Files_OpenWith_Fzf()
 
 inoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
 nnoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
+
+" Disable YouCompleteMe preview window
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
