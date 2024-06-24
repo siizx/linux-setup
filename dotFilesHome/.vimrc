@@ -8,17 +8,17 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 " - Config:
-"Plug 'preservim/nerdtree'
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
-"Plug 'tpope/vim-commentary'        " A simple and effective plugin for commenting out code.
 " Begin the plugin section
 call plug#begin('~/.vim/plugged')
 
 " List your plugins here
 " -Example: 
-Plug 'vim-airline/vim-airline'     " A powerful status line plugin for Vim.
-Plug 'kien/ctrlp.vim'              " A full path fuzzy file, buffer, and MRU finder.
+"Plug 'preservim/nerdtree'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+"Plug 'tpope/vim-commentary'        " A simple and effective plugin for commenting out code.
+"Plug 'kien/ctrlp.vim'              " A full path fuzzy file, buffer, and MRU finder.
+Plug 'vim-airline/vim-airline'     " A powerful status line plugin for Vim. (riguarda tutta la barra dove sta 'insert/normal/visual'
 Plug 'tpope/vim-surround'          " Easily delete, change, and add surroundings in pairs.
 Plug 'vim-syntastic/syntastic'     " A syntax checking plugin for various programming languages.
 Plug 'ycm-core/YouCompleteMe'      " A powerful code completion engine for Vim.
@@ -54,6 +54,18 @@ set autoindent
 set relativenumber
 syntax on
 set clipboard=unnamedplus
+
+" -StatusBar: (Serve solo se non ho installato vim-airline)
+"set laststatus=2
+"set statusline=%f           " Full file path
+"set statusline+=%y          " File type
+"set statusline+=%r          " Read-only flag
+"set statusline+=%h          " Help flag
+"set statusline+=%m          " Modified flag
+"set statusline+=\ [%{&ff}]  " File format
+"set statusline+=\ [%l/%L]   " Line number / Total lines
+"set statusline+=%p%%        " Percentage through file
+
 
 " My function for fzf:
 function! Files_OpenWith_Fzf()
