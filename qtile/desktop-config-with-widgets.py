@@ -145,7 +145,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-		wallpaper="/usr/share/wallpapers/FuturePrototypeWithLogo/contents/images/1920x1080.svg",
+		wallpaper="/usr/share/wallpapers/Joy/contents/images/1920x1080.svg",
         wallpaper_mode="fill",
         top=bar.Bar(
             [
