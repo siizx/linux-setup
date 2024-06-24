@@ -138,9 +138,17 @@ alias gc='git commit -m'
 alias gpsh='git push'
 alias gpll='git pull'
 
-export VISUAL=vim; export EDITOR=vim;
-
+export VISUAL=vim;
+export EDITOR=vim;
 export TERM=kitty
+# Enable colors in man pages
+export LESS_TERMCAP_mb=$(printf '\e[1;31m')  # Begin bold (red)
+export LESS_TERMCAP_md=$(printf '\e[1;35m')  # Begin blink (magenta)
+export LESS_TERMCAP_me=$(printf '\e[0m')     # End bold/blink
+export LESS_TERMCAP_se=$(printf '\e[0m')     # End standout-mode
+export LESS_TERMCAP_so=$(printf '\e[1;33m')  # Begin standout-mode (yellow)
+export LESS_TERMCAP_ue=$(printf '\e[0m')     # End underline
+export LESS_TERMCAP_us=$(printf '\e[1;32m')  # Begin underline (green)
 # Remove duplicates from PATH
 export PATH=$(echo "$PATH" | awk -v RS=':' '!a[$1]++' | paste -sd:)
 export PATH="$PATH:/sbin"
