@@ -81,5 +81,5 @@ endfunction
 
 command! FilesOpenWithFZF call Files_OpenWith_Fzf()
 
-inoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
-nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+inoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
+nnoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
