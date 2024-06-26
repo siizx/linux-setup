@@ -145,7 +145,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-		wallpaper="~/Pictures/wallhaven-kw22p1.jpg",
+		wallpaper="/usr/share/wallpapers/Joy/contents/images/1920x1080.svg",
         wallpaper_mode="fill",
         top=bar.Bar(
             [
@@ -162,7 +162,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
 				widget.Net(interface='ens160'),
 				widget.Sep(), # Separator ---
-				#widget.Wlan(interface='ens160'), # non serve su vm
+				#widget.Wlan(interface='ens160'),
 				#widget.Sep(), # Separator ---
 				#widget.CPUGraph(),
 				#widget.CPU(),
@@ -173,17 +173,17 @@ screens = [
                 widget.StatusNotifier(),
                 widget.Systray(),
                 widget.Clock(fontsize='18',format="%H:%M %a %d-%m-%Y"),
-				#widget.Sep(), # Separator ---
+				widget.Sep(), # Separator ---
 				#widget.BatteryIcon(),
 				#widget.Battery(fontsize='14', format="{char} {percent:2.0%}"),
-				widget.Sep(), # Separator ---
+				#widget.Sep(), # Separator ---
 				widget.Volume(emoji=True, get_volume_command=None),
 				widget.Volume(),
-				#widget.Sep(), # Separator ---
+				widget.Sep(), # Separator ---
 				#widget.Image(filename='/home/andrea/.config/qtile/brightness.svg'),
 				#widget.Backlight(backlight_name="intel_backlight"),
 				#widget.Bluetooth(),
-				widget.Sep(), # Separator ---
+				#widget.Sep(), # Separator ---
                 widget.QuickExit(),
             ],
             24,
