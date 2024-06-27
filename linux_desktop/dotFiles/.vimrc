@@ -21,8 +21,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'     " A powerful status line plugin for Vim. (riguarda tutta la barra dove sta 'insert/normal/visual'
 Plug 'tpope/vim-surround'          " Easily delete, change, and add surroundings in pairs.
 Plug 'vim-syntastic/syntastic'     " A syntax checking plugin for various programming languages.
-Plug 'ycm-core/YouCompleteMe'      " A powerful code completion engine for Vim.
-Plug 'tpope/vim-fugitive'          " A Git wrapper providing Git commands and integration within Vim.
+"Plug 'ycm-core/YouCompleteMe'      " A powerful code completion engine for Vim.
+"Plug 'tpope/vim-fugitive'          " A Git wrapper providing Git commands and integration within Vim.
 Plug 'joshdick/onedark.vim'        " Theme
 
 " End the plugin section
@@ -81,10 +81,15 @@ endfunction
 
 command! FilesOpenWithFZF call Files_OpenWith_Fzf()
 
-inoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
-nnoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
+inoremap <c-l> <Esc>:Lex<cr>:vertical resize 30<cr>
+nnoremap <c-l> <Esc>:Lex<cr>:vertical resize 30<cr>
 
 " Disable YouCompleteMe preview window
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_insertion = 1
 
+set nocompatible
+syntax enable
+filetype plugin on
+set wildmenu
+set path+=**

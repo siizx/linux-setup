@@ -145,7 +145,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-		wallpaper="~/Pictures/wallhaven-kw22p1.jpg",
+		wallpaper="/usr/share/wallpapers/Joy/contents/images/1920x1080.svg",
         wallpaper_mode="fill",
         top=bar.Bar(
             [
@@ -162,7 +162,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
 				widget.Net(interface='wlo1'),
 				widget.Sep(), # Separator ---
-				widget.Wlan(interface='wlo1'),
+				widget.Wlan(interface='wlo1', format='{essid} {percent:2.0%}'),
 				widget.Sep(), # Separator ---
 				#widget.CPUGraph(),
 				widget.CPU(),

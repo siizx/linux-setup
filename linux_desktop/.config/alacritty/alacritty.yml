@@ -29,5 +29,4 @@ colors:
 # Font configuration
 font:
   # Point size
-#  size: 11.0 # LAPTOP
-  size: 8.0 # DESKTOP
+  size: 8.0
