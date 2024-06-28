@@ -22,9 +22,13 @@ Plug 'vim-airline/vim-airline'     " A powerful status line plugin for Vim. (rig
 Plug 'tpope/vim-surround'          " Easily delete, change, and add surroundings in pairs.
 Plug 'vim-syntastic/syntastic'     " A syntax checking plugin for various programming languages.
 "Plug 'ycm-core/YouCompleteMe'      " A powerful code completion engine for Vim. VIM DEVE ESSERE COMPILATO CON PYTHON 8+
-Plug 'tpope/vim-fugitive'          " A Git wrapper providing Git commands and integration within Vim.
+"Plug 'tpope/vim-fugitive'          " A Git wrapper providing Git commands and integration within Vim.
 Plug 'joshdick/onedark.vim'        " Theme
 
+" Disable YouCompleteMe preview window
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_insertion = 1
+"
 " End the plugin section
 call plug#end()
 
@@ -84,7 +88,9 @@ command! FilesOpenWithFZF call Files_OpenWith_Fzf()
 inoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
 nnoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
 
-" Disable YouCompleteMe preview window
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+set nocompatible "stop mimiking VI"
+syntax enable "allow colors
+filetype plugin on "built-in vim plugin that uses file browsing
+set path+=** "search in subdirectories recoursively
+set wildmenu "Display all matching files when we tab complete
 
