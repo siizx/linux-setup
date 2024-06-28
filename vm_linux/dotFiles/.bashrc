@@ -120,6 +120,7 @@ alias increase-volume='pactl set-sink-volume 0 +10%'
 alias decrease-volume='pactl set-sink-volume 0 -10%'
 
 # General Section
+alias bat='batcat'
 alias Poff_poweroff_alias='poweroff'
 alias aggiorna='sudo apt update && sudo apt upgrade -y'
 alias fzfvim='vim $(fzf)'
