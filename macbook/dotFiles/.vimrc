@@ -57,7 +57,8 @@ set tabstop=4
 set autoindent
 set relativenumber
 syntax on
-set clipboard=unnamedplus
+set nocompatible "stop mimiking VI"
+set clipboard=unnamed
 
 " -StatusBar: (Serve solo se non ho installato vim-airline)
 "set laststatus=2
@@ -88,9 +89,9 @@ command! FilesOpenWithFZF call Files_OpenWith_Fzf()
 inoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
 nnoremap <c-x> <Esc>:Lex<cr>:vertical resize 30<cr>
 
-set nocompatible "stop mimiking VI"
 syntax enable "allow colors
 filetype plugin on "built-in vim plugin that uses file browsing
 set path+=** "search in subdirectories recoursively
 set wildmenu "Display all matching files when we tab complete
-
+" the following line fixes the 'backspace' (or delete key) on mac.
+set backspace=indent,eol,start

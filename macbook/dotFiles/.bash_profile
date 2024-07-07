@@ -5,6 +5,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/usr/local/bin:$PATH"
 # for Finding files using vim
 export PATH="~/git:$PATH"
+# for python, pip etc
+export PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH"
 # Hides the default login message
 export BASH_SILENCE_DEPRECATION_WARNING=1
 # set a fancy prompt (non-color, unless we know we "want" color)
