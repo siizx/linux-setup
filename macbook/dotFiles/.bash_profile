@@ -41,7 +41,7 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 	alias ll='ls -alh --color=auto'
 
 # General Section
-alias Poff_poweroff_alias='poweroff'
+alias Poff_poweroff_alias='sudo poweroff'
 alias g++='/opt/homebrew/bin/g++-14'
 
 # Aliases for git commands
