@@ -41,6 +41,7 @@ keys = [
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
 	Key([mod], "b", lazy.spawn("brave-browser"), desc="Launch brave-browser"),
+	Key([mod], "c", lazy.spawn("code"), desc="Launch vscode"),
     Key(
         [mod, "shift"],
         "Return",
