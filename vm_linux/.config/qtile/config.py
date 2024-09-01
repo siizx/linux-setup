@@ -42,6 +42,8 @@ keys = [
     # multiple stack panes
 	Key([mod], "b", lazy.spawn("brave-browser"), desc="Launch brave-browser"),
 	Key([mod], "c", lazy.spawn("code"), desc="Launch vscode"),
+	Key([mod], "o", lazy.spawn("thunar"), desc="Launch thunar"),
+	Key([mod], "p", lazy.spawn("evince"), desc="Launch evince PDF reader"),
     Key(
         [mod, "shift"],
         "Return",
