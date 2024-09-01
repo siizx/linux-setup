@@ -5,6 +5,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/usr/local/bin:$PATH"
 # for Finding files using vim
 export PATH="~/git:$PATH"
+# for python, pip etc
+export PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH"
 # Hides the default login message
 export BASH_SILENCE_DEPRECATION_WARNING=1
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -39,7 +41,7 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 	alias ll='ls -alh --color=auto'
 
 # General Section
-alias Poff_poweroff_alias='poweroff'
+alias Poff_poweroff_alias='sudo poweroff'
 alias g++='/opt/homebrew/bin/g++-14'
 
 # Aliases for git commands
