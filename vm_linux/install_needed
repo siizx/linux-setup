@@ -13,11 +13,9 @@ sudo hash -d vim
 sudo apt install vim-gtk -y
 #sudo apt install i3 -y
 sudo apt install snapd -y
-#sudo snap install nordpass -y
 sudo apt install gh -y
 sudo apt install python3-dev python3-pip python3-setuptools -y
 sudo apt install pipx -y
-#pipx install thefuck
 sudo apt install pavucontrol -y
 sudo apt install tig -y # Git Repository Browser
 sudo apt install linux-headers-$(uname -r) -y
@@ -50,5 +48,7 @@ sudo apt install thunderbird -y
 sudo apt-get install thunar -y
 sudo apt install lxappearance -y
 sudo apt install gtk-chtheme -y
+sudo apt install evince -y # PDF reader
 
+echo "Controlla che funzioni vim, altrimenti trova il vim-gtk adatto."
 read -p "~~~ DONE! Press enter to exit."
