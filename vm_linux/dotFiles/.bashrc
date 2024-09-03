@@ -129,6 +129,7 @@ alias copy-gitBashrc-INTO-homeBashrc='read -p "Are you sure you want to overwrit
 alias brightness-py-cli='python3 ~/Documents/linux-screen-brightness-dimmer/dimmer.py'
 alias brightness-py-gui='python3 ~/Documents/linux-screen-brightness-dimmer/gui-dimmer.py'
 alias auto-rm-auto-cl='sudo apt autoremove && sudo apt autoclean'
+alias logout-qtile='qtile cmd-obj -o cmd -f shutdown'
 
 # Aliases for git commands
 

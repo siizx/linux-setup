@@ -39,6 +39,16 @@ sudo apt install brightnessctl -y
 sudo apt install playerctl -y
 sudo apt install pactl -y
 
+# INVERT THE MOUSE SCROLL WHEEL DIRECTION TO NATURAL:
+sudo mkdir -p /etc/X11/xorg.conf.d/ # Per precauzione
+sudo bash -c 'cat << EOF > /etc/X11/xorg.conf.d/40-libinput.conf
+Section "InputClass"
+    Identifier "My Mouse"
+    MatchIsPointer "on"
+    Option "NaturalScrolling" "true"
+EndSection
+EOF'
+
 # LOW Priority commands
 mkdir ~/.vim
 git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
