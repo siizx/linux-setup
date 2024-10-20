@@ -40,10 +40,12 @@ keys = [
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
+    # Bind "Print" button to "scrot -s"
+    Key([], "Print", lazy.spawn("scrot -s /home/andrea/Pictures")),
 	Key([mod], "b", lazy.spawn("brave-browser"), desc="Launch brave-browser"),
 	Key([mod], "c", lazy.spawn("code"), desc="Launch vscode"),
 	Key([mod], "o", lazy.spawn("thunar"), desc="Launch thunar"),
-	Key([mod], "p", lazy.spawn("evince"), desc="Launch evince PDF reader"),
+	Key([mod], "p", lazy.spawn("okular"), desc="Launch Okular PDF reader & markup"),
     Key(
         [mod, "shift"],
         "Return",
