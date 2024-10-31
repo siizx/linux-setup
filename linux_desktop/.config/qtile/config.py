@@ -46,6 +46,8 @@ keys = [
 	Key([mod], "c", lazy.spawn("code"), desc="Launch vscode"),
 	Key([mod], "o", lazy.spawn("thunar"), desc="Launch thunar"),
 	Key([mod], "p", lazy.spawn("okular"), desc="Launch Okular PDF reader & markup"),
+	Key([mod], "a", lazy.spawn("pavucontrol"), desc="Launch pavucontrol"),
+	Key([mod], "d", lazy.spawn("discord"), desc="Launch Discord"),
     Key(
         [mod, "shift"],
         "Return",
