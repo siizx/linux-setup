@@ -43,7 +43,7 @@ keys = [
 	Key([mod], "b", lazy.spawn("brave-browser"), desc="Launch brave-browser"),
 	Key([mod], "c", lazy.spawn("code"), desc="Launch vscode"),
 	Key([mod], "o", lazy.spawn("thunar"), desc="Launch thunar"),
-	Key([mod], "p", lazy.spawn("evince"), desc="Launch evince PDF reader"),
+	Key([mod], "p", lazy.spawn("okular"), desc="Launch okular PDF reader and marker"),
     Key(
         [mod, "shift"],
         "Return",
@@ -66,6 +66,8 @@ keys = [
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 	
 	####### MY KEYBINDS #####
+    # Bind "Print" button to "scrot -s"
+    Key([], "Print", lazy.spawn("scrot -s /home/andrea/Pictures")),
 	# Brightness controls:
 	Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +10%"), desc="Increase brightness"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s 10%-"), desc="Decrease brightness"),
