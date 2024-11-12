@@ -46,6 +46,7 @@ alias g++='/opt/homebrew/bin/g++-14'
 
 # Aliases for git commands
 
+alias clear="clear && printf '\e[3J'"
 alias general-commit-push='git add . && git commit -m "general update" && git push origin master'
 alias gs='git status'
 alias ga='git add'
@@ -53,3 +54,7 @@ alias gc='git commit -m'
 alias gpsh='git push'
 alias gpll='git pull'
 
+# exporting homebrew stuff
+export PATH="/opt/homebrew/bin:$PATH"
+export CPATH="/opt/homebrew/include:$CPATH"
+export LIBRARY_PATH="/opt/homebrew/lib:$LIBRARY_PATH"
