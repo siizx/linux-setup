@@ -150,6 +150,11 @@ export PATH=$PATH:/home/andrea/.local/share/JetBrains/Toolbox/apps/clion/bin
 export PATH=$PATH:/home/andrea/.local/share/JetBrains/Toolbox/apps/pycharm-professional/bin
 export PATH=$PATH:/home/andrea/.local/share/JetBrains/Toolbox/apps/datagrip/bin
 export PATH=$PATH:/home/andrea/.local/share/JetBrains/Toolbox/apps/android-studio/bin
+
+# Aggiungo gli alias dei programmi JetBrains per comodita'
+alias android-studio='/home/andrea/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio'
+alias intellij-idea='/home/andrea/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea'
+
 # Enable colors in man pages
 export LESS_TERMCAP_mb=$(printf '\e[1;31m')  # Begin bold (red)
 export LESS_TERMCAP_md=$(printf '\e[1;35m')  # Begin blink (magenta)
