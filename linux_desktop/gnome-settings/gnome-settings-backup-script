@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Directories to save
+BACKUP_DIR=/home/andrea/git/linux-setup/linux_desktop/gnome-settings
+
+mkdir -p $BACKUP_DIR
+
+# Backup Dconf settings
+dconf dump / > $BACKUP_DIR/gnome-settings-backup.dconf
+dconf dump /org/gnome/settings-daemon/plugins/media-keys/ > $BACKUP_DIR/gnome-keyboard-shortcuts.dconf
+dconf dump /org/gnome/shell/extensions/ > $BACKUP_DIR/gnome-extensions-settings.dconf
+
+# Backup extensions
+tar -czvf $BACKUP_DIR/gnome-extensions-backup.tar.gz ~/.local/share/gnome-shell/extensions/
+
+
+echo "GNOME backup complete. Files are saved in $BACKUP_DIR."
+

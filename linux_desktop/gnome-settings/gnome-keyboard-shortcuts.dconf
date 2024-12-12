@@ -1,0 +1,29 @@
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+help=@as []
+search=['<Super>space']
+
+[custom-keybindings/custom0]
+binding='<Super>Return'
+command='kitty'
+name='Open terminal'
+
+[custom-keybindings/custom1]
+binding='<Super>a'
+command='pavucontrol'
+name='Open Audio settings'
+
+[custom-keybindings/custom2]
+binding='<Super>d'
+command='discord'
+name='Discord'
+
+[custom-keybindings/custom3]
+binding='<Super>p'
+command='okular'
+name='Open pdf'
+
+[custom-keybindings/custom4]
+binding='<Super>o'
+command='nautilus'
+name='Open nautilus'
