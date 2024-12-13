@@ -114,20 +114,21 @@ if ! shopt -oq posix; then
 fi
 
 ############ My aliases and stuff #############
-#(cat ~/.cache/wal/sequences &)
-# Volume Controls
-alias increase-volume='pactl set-sink-volume 0 +10%'
-alias decrease-volume='pactl set-sink-volume 0 -10%'
 
 # General Section
-alias clear="clear && printf '\e[3J'"
+if [ -n "$TMUX" ]; then
+    alias clear="clear && printf '\e[3J' && tmux clear-history"
+else
+    alias clear="clear && printf '\e[3J'"
+fi
+# Rebind Ctrl+L to use the alias altrimenti viene eseguita solo una clear di default
+bind '"\C-l":"clear\n"'
+
 alias Poff_poweroff_alias='poweroff'
 alias aggiorna='sudo apt update && sudo apt upgrade -y'
 alias fzfvim='vim $(fzf)'
 alias copy-homeBashrc-INTO-gitBashrc='read -p "Are you sure you want to overwrite ~/git/linux-desktop/.bashrc with ~/.bashrc? (y/n): " confirm && [ "$confirm" = "y" ] && cp ~/.bashrc ~/git/linux-desktop/dotFilesHome/.bashrc'
 alias copy-gitBashrc-INTO-homeBashrc='read -p "Are you sure you want to overwrite ~/.bashrc with with ~/git/linux-desktop/dotFilesHome/.bashrc? (y/n): " confirm && [ "$confirm" = "y" ] && cp ~/git/linux-desktop/dotFilesHome/.bashrc ~/.bashrc ; source ~/.bashrc'
-alias brightness-py-cli='python3 ~/Documents/linux-screen-brightness-dimmer/dimmer.py'
-alias brightness-py-gui='python3 ~/Documents/linux-screen-brightness-dimmer/gui-dimmer.py'
 alias auto-rm-auto-cl='sudo apt autoremove && sudo apt autoclean'
 alias logout-qtile='qtile cmd-obj -o cmd -f shutdown'
 
