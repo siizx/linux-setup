@@ -1,0 +1,48 @@
+Thank you for sharing the correct order to fix the Secure Boot issue with NVIDIA drivers on Debian. Here is a detailed and structured step-by-step guide based on your provided solution:
+
+### Step-by-Step Guide to Fix Secure Boot Issue with NVIDIA Drivers on Debian
+
+1. **Generate Keys:**
+   First, generate the Machine Owner Key (MOK) that will be used to sign the NVIDIA kernel modules.
+
+   ```bash
+   sudo apt install openssl
+   openssl req -new -x509 -newkey rsa:2048 -keyout MOK.priv -outform DER -out MOK.der -nodes -days 36500 -subj "/CN=Kernel Module Signing/"
+   ```
+
+2. **Enroll the Keys:**
+   Enroll the generated MOK so that it is recognized by the Secure Boot mechanism.
+
+   ```bash
+   sudo mokutil --import MOK.der
+   ```
+
+   You will be prompted to create a password. After entering the password, reboot your system.
+
+3. **Complete the Enrollment Process:**
+   During the reboot, you will be prompted to enroll the MOK. Follow the on-screen instructions to complete the enrollment process. Use the arrow keys and Enter to navigate through the menus and enter the password you set earlier.
+
+4. **Enable Secure Boot:**
+   After enrolling the keys, enable Secure Boot in your BIOS/UEFI settings and reboot your system.
+
+5. **Login to TTY:**
+   If the graphical login screen does not appear, switch to a TTY session by pressing `Ctrl+Alt+F2` (or `Ctrl+Alt+F3`, etc.). Log in with your credentials.
+
+6. **Register the NVIDIA Keys:**
+   Sign the NVIDIA kernel modules using the enrolled MOK.
+
+   ```bash
+   sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 ./MOK.priv ./MOK.der $(modinfo -n nvidia)
+   sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 ./MOK.priv ./MOK.der $(modinfo -n nvidia-drm)
+   sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 ./MOK.priv ./MOK.der $(modinfo -n nvidia-modeset)
+   sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 ./MOK.priv ./MOK.der $(modinfo -n nvidia-uvm)
+   ```
+
+7. **Reboot the System:**
+   After signing the modules, reboot your system.
+
+```bash
+sudo reboot
+```
+
+Your Debian system should now boot correctly with Secure Boot enabled, and the NVIDIA drivers should work as expected. If you encounter any further issues, feel free to ask for more assistance.
